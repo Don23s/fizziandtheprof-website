@@ -152,14 +152,27 @@ function renderEpisodes(lang) {
   ["phase1", "phase2"].forEach(phase => {
     const grid = document.getElementById("grid-" + phase);
     if (!grid) return;
-    grid.innerHTML = EPISODES[phase].map(ep => `
-      <div class="episode-card${ep.status === 'soon' ? ' dimmed' : ''}">
-        <span class="ep-number">${ep.num}</span>
-        <div class="ep-icon">${ep.icon}</div>
-        <div class="ep-title">${ep[lang] || ep.en}</div>
-        <span class="ep-age${phase === 'phase2' ? ' phase2' : ''}">${AGE_LABELS[phase][lang] || AGE_LABELS[phase].en}</span>
-        <span class="ep-status ${ep.status}">${STATUS_LABELS[ep.status][lang] || STATUS_LABELS[ep.status].en}</span>
-      </div>
-    `).join('');
+    grid.innerHTML = EPISODES[phase].map(ep => {
+      const hasVideo = ep.ytId && ep.status === 'available';
+      const thumbHtml = hasVideo
+        ? `<a href="https://www.youtube.com/watch?v=${ep.ytId}" target="_blank" rel="noopener" class="ep-thumb-link">
+             <img class="ep-thumb" src="https://img.youtube.com/vi/${ep.ytId}/mqdefault.jpg" alt="${ep[lang] || ep.en}" loading="lazy" />
+             <span class="ep-play-btn" aria-hidden="true">▶</span>
+           </a>`
+        : `<div class="ep-icon">${ep.icon}</div>`;
+      const wrapper = hasVideo
+        ? `<a href="https://www.youtube.com/watch?v=${ep.ytId}" target="_blank" rel="noopener" class="episode-card${ep.status === 'soon' ? ' dimmed' : ''} has-thumb">`
+        : `<div class="episode-card${ep.status === 'soon' ? ' dimmed' : ''}">`;
+      const wrapperClose = hasVideo ? `</a>` : `</div>`;
+      return `
+        ${wrapper}
+          <span class="ep-number">${ep.num}</span>
+          ${thumbHtml}
+          <div class="ep-title">${ep[lang] || ep.en}</div>
+          <span class="ep-age${phase === 'phase2' ? ' phase2' : ''}">${AGE_LABELS[phase][lang] || AGE_LABELS[phase].en}</span>
+          <span class="ep-status ${ep.status}">${STATUS_LABELS[ep.status][lang] || STATUS_LABELS[ep.status].en}</span>
+        ${wrapperClose}
+      `;
+    }).join('');
   });
 }

@@ -14,6 +14,7 @@
   <meta name="twitter:description" content="Legal notice and imprint for Fizzi & The Prof." />
   <meta name="twitter:image"      content="https://www.fizziandtheprof.org/assets/titelbild_en.png" />
   <title>Fizzi & The Prof – Imprint</title>
+    <link rel="canonical" href="https://www.fizziandtheprof.org/imprint.html" />
   <link rel="icon" href="assets/logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet" />
@@ -131,6 +132,66 @@
     <p>The European Commission provides a platform for online dispute resolution: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>. I am not obliged or willing to participate in dispute resolution proceedings before a consumer arbitration board.</p>
   </div>
 
+  <!-- ── FRANÇAIS ── -->
+  <div class="imprint-box" data-lang-block="fr">
+    <h1>Mentions légales</h1>
+
+    <h2>Responsable du contenu</h2>
+    <address>
+      Severin Stadler<br />
+      Berne, Suisse
+    </address>
+
+    <h2>Contact</h2>
+    <p>E-mail : <span class="email-protected" onclick="revealEmail(this)" title="Cliquer pour afficher">[Afficher l'e-mail]</span></p>
+
+    <h2>Chaîne YouTube</h2>
+    <p>
+      <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener">
+        youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA
+      </a>
+    </p>
+
+    <h2>Avertissement</h2>
+    <p>Le contenu de ce site a été compilé avec le plus grand soin. Cependant, je ne peux garantir l'exactitude, l'exhaustivité ou l'actualité des informations fournies. En tant que particulier, je suis responsable de mon propre contenu conformément à la législation applicable. La responsabilité pour les liens externes est exclue tant qu'aucune violation légale concrète n'est connue.</p>
+
+    <h2>Droit d'auteur</h2>
+    <p>Tout le contenu publié sur ce site (textes, images, graphiques) est protégé par le droit d'auteur. La reproduction ou l'utilisation sans autorisation expresse n'est pas autorisée.</p>
+
+    <h2>Résolution des litiges</h2>
+    <p>La Commission européenne met à disposition une plateforme de résolution des litiges en ligne : <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>. Je ne suis pas obligé ni disposé à participer à une procédure de règlement des litiges devant un organisme de conciliation.</p>
+  </div>
+
+  <!-- ── ESPAÑOL ── -->
+  <div class="imprint-box" data-lang-block="es">
+    <h1>Aviso legal</h1>
+
+    <h2>Responsable del contenido</h2>
+    <address>
+      Severin Stadler<br />
+      Berna, Suiza
+    </address>
+
+    <h2>Contacto</h2>
+    <p>Correo electrónico: <span class="email-protected" onclick="revealEmail(this)" title="Haga clic para mostrar">[Mostrar correo]</span></p>
+
+    <h2>Canal de YouTube</h2>
+    <p>
+      <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener">
+        youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA
+      </a>
+    </p>
+
+    <h2>Descargo de responsabilidad</h2>
+    <p>El contenido de este sitio web ha sido compilado con el mayor cuidado. Sin embargo, no puedo garantizar la exactitud, integridad o actualidad de la información proporcionada. Como particular, soy responsable de mi propio contenido de acuerdo con la legislación aplicable. La responsabilidad por enlaces externos queda excluida mientras no se conozcan infracciones legales concretas.</p>
+
+    <h2>Derechos de autor</h2>
+    <p>Todo el contenido publicado en este sitio web (textos, imágenes, gráficos) está protegido por derechos de autor. La reproducción o el uso sin permiso expreso no está permitido.</p>
+
+    <h2>Resolución de disputas</h2>
+    <p>La Comisión Europea proporciona una plataforma para la resolución de disputas en línea: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>. No estoy obligado ni dispuesto a participar en procedimientos de resolución de disputas ante una junta de arbitraje de consumidores.</p>
+  </div>
+
   <footer>
     <img src="assets/logo.png" alt="F&P Logo" class="footer-logo" />
     <p class="footer-tagline" data-i18n="footer_tagline">Learn. Laugh. Grow.</p>
@@ -152,7 +213,7 @@
 
     function showLangBlock(lang) {
       document.querySelectorAll('[data-lang-block]').forEach(el => {
-        el.classList.toggle('active', el.dataset.langBlock === (lang === 'de' ? 'de' : 'en'));
+        el.classList.toggle('active', el.dataset.langBlock === lang);
       });
     }
 

@@ -15,6 +15,7 @@
   <meta name="twitter:image"      content="https://www.fizziandtheprof.org/assets/titelbild_en.png" />
   <title>Fizzi & The Prof</title>
   <meta name="description" content="Educational adventures for children – free on YouTube. Lehrreiche Abenteuer für Kinder – kostenlos auf YouTube." />
+    <link rel="canonical" href="https://www.fizziandtheprof.org/" />
   <link rel="icon" href="assets/logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet" />
@@ -205,5 +206,37 @@
   <script src="js/i18n.js"></script>
   <script>initI18n();</script>
   <script src="js/main.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.fizziandtheprof.org/#website",
+        "url": "https://www.fizziandtheprof.org/",
+        "name": "Fizzi & The Prof",
+        "description": "Educational adventures for children aged 4 to 18 – free on YouTube.",
+        "inLanguage": ["de", "en", "fr", "es"]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.fizziandtheprof.org/#org",
+        "name": "Fizzi & The Prof",
+        "url": "https://www.fizziandtheprof.org/",
+        "logo": "https://www.fizziandtheprof.org/assets/logo.png",
+        "sameAs": ["https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA"]
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA",
+        "name": "Fizzi & The Prof – YouTube Channel",
+        "description": "Free educational videos for children aged 4–18, available in German, English, French, and Spanish.",
+        "thumbnailUrl": "https://www.fizziandtheprof.org/assets/titelbild_en.png",
+        "uploadDate": "2025-01-01",
+        "publisher": { "@id": "https://www.fizziandtheprof.org/#org" }
+      }
+    ]
+  }
+  </script>
 </body>
 </html>

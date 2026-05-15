@@ -492,3 +492,82 @@ footer .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
   .stats-bar { gap: 1rem; padding: 1rem; }
   .stat-number { font-size: 1.4rem; }
 }
+
+/* ── YouTube Thumbnail Cards ── */
+.episode-card.has-thumb { text-decoration: none; color: inherit; }
+.ep-thumb-link {
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0.25rem 0;
+  aspect-ratio: 16/9;
+}
+.ep-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s;
+}
+.ep-thumb-link:hover .ep-thumb { transform: scale(1.04); }
+.ep-play-btn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+  background: rgba(0,0,0,0.28);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.ep-thumb-link:hover .ep-play-btn { opacity: 1; }
+
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Cookie Banner ── */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 2px solid var(--cream);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+  padding: 0.9rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  z-index: 9999;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+#cookie-banner p { flex: 1; min-width: 200px; }
+#cookie-banner a { color: var(--orange); }
+#cookie-accept {
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-weight: 800;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+#cookie-accept:hover { background: var(--orange-d); }
