@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fizzi & The Prof – Datenschutz</title>
+  <title>Fizzi & The Prof – Privacy Policy</title>
   <link rel="icon" href="assets/logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet" />
@@ -25,22 +25,17 @@
       line-height: 1.8;
       margin-bottom: 0.5rem;
     }
-    .privacy-box ul {
-      padding-left: 1.4rem;
-      margin-bottom: 1rem;
-    }
+    .privacy-box ul { padding-left: 1.4rem; margin-bottom: 1rem; }
     .privacy-box a { color: var(--orange); text-decoration: none; }
     .privacy-box a:hover { text-decoration: underline; }
-    .privacy-date {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 2.5rem;
-    }
+    .privacy-date { font-size: 0.85rem; color: var(--muted); margin-bottom: 2.5rem; }
     .email-protected {
       cursor: pointer;
       color: var(--orange);
       border-bottom: 1px dashed var(--orange);
     }
+    [data-lang-block] { display: none; }
+    [data-lang-block].active { display: block; }
   </style>
 </head>
 <body>
@@ -65,88 +60,86 @@
     </div>
   </header>
 
-  <div class="privacy-box">
+  <!-- ── DEUTSCH ── -->
+  <div class="privacy-box" data-lang-block="de">
     <h1>Datenschutzerklärung</h1>
     <p class="privacy-date">Stand: Mai 2025</p>
 
     <h2>1. Verantwortliche Person</h2>
-    <p>
-      Verantwortlich für die Datenbearbeitung auf dieser Website ist:<br />
-      Severin Stadler, Bern, Schweiz<br />
-      E-Mail: <span class="email-protected" id="privacy-email" onclick="revealEmail()" title="Klicken zum Anzeigen">[E-Mail anzeigen]</span>
-    </p>
+    <p>Severin Stadler, Bern, Schweiz<br />
+    E-Mail: <span class="email-protected" onclick="revealEmail(this)" title="Klicken zum Anzeigen">[E-Mail anzeigen]</span></p>
 
     <h2>2. Grundsatz</h2>
-    <p>
-      Diese Website ist eine reine Informationsseite und erhebt keine personenbezogenen Daten aktiv.
-      Es werden keine Cookies gesetzt, kein Tracking durchgeführt und keine Nutzerprofile erstellt.
-    </p>
+    <p>Diese Website ist eine reine Informationsseite und erhebt keine personenbezogenen Daten aktiv. Es werden keine Cookies gesetzt, kein Tracking durchgeführt und keine Nutzerprofile erstellt.</p>
 
     <h2>3. Server-Logs (GitHub Pages)</h2>
-    <p>
-      Diese Website wird über GitHub Pages (GitHub, Inc., USA) gehostet. Beim Aufruf der Seite
-      werden automatisch technische Daten übertragen und in Server-Logfiles gespeichert:
-    </p>
+    <p>Diese Website wird über GitHub Pages (GitHub, Inc., USA) gehostet. Beim Aufruf der Seite werden automatisch technische Daten übertragen und in Server-Logfiles gespeichert:</p>
     <ul>
       <li>IP-Adresse (anonymisiert)</li>
       <li>Datum und Uhrzeit des Zugriffs</li>
       <li>Aufgerufene Seite</li>
       <li>Browser und Betriebssystem</li>
     </ul>
-    <p>
-      Diese Daten werden ausschliesslich zur technischen Sicherstellung des Betriebs verwendet
-      und nach kurzer Zeit gelöscht. Rechtsgrundlage: berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO / Art. 31 nDSG).
-      Weitere Informationen: <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection" target="_blank" rel="noopener">GitHub Pages Datenschutz</a>.
-    </p>
+    <p>Diese Daten werden ausschliesslich zur technischen Sicherstellung des Betriebs verwendet und nach kurzer Zeit gelöscht. Rechtsgrundlage: berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO / Art. 31 nDSG). Weitere Informationen: <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection" target="_blank" rel="noopener">GitHub Pages Datenschutz</a>.</p>
 
     <h2>4. Google Fonts</h2>
-    <p>
-      Diese Website lädt Schriftarten von Google Fonts (Google LLC, USA). Dabei wird die
-      IP-Adresse des Besuchers an Google übertragen. Rechtsgrundlage: berechtigtes Interesse.
-      Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.
-    </p>
+    <p>Diese Website lädt Schriftarten von Google Fonts (Google LLC, USA). Dabei wird die IP-Adresse des Besuchers an Google übertragen. Rechtsgrundlage: berechtigtes Interesse. Datenschutzerklärung: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
 
     <h2>5. Externe Links (YouTube)</h2>
-    <p>
-      Diese Website enthält Links zum YouTube-Kanal von Fizzi & The Prof
-      (YouTube LLC / Google LLC, USA). Sobald du auf einen YouTube-Link klickst,
-      verlässt du diese Website. Es gelten dann die Datenschutzbestimmungen von YouTube:
-      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.
-    </p>
+    <p>Diese Website enthält Links zum YouTube-Kanal von Fizzi & The Prof (YouTube LLC / Google LLC, USA). Sobald du auf einen YouTube-Link klickst, verlässt du diese Website. Es gelten dann die Datenschutzbestimmungen von YouTube: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
 
     <h2>6. Kontaktaufnahme per E-Mail</h2>
-    <p>
-      Wenn du uns per E-Mail kontaktierst, werden die übermittelten Daten (Name, E-Mail-Adresse,
-      Nachrichteninhalt) ausschliesslich zur Bearbeitung deiner Anfrage verwendet und
-      nicht an Dritte weitergegeben. Rechtsgrundlage: Vertragserfüllung bzw. berechtigtes Interesse.
-    </p>
+    <p>Wenn du uns per E-Mail kontaktierst, werden die übermittelten Daten ausschliesslich zur Bearbeitung deiner Anfrage verwendet und nicht an Dritte weitergegeben.</p>
 
     <h2>7. Deine Rechte</h2>
-    <p>Du hast jederzeit das Recht auf:</p>
-    <ul>
-      <li>Auskunft über deine gespeicherten Daten</li>
-      <li>Berichtigung unrichtiger Daten</li>
-      <li>Löschung deiner Daten</li>
-      <li>Einschränkung der Bearbeitung</li>
-      <li>Datenübertragbarkeit</li>
-      <li>Widerspruch gegen die Bearbeitung</li>
-    </ul>
-    <p>
-      Anfragen richtest du per E-Mail an:
-      <span class="email-protected" id="privacy-email-2" onclick="revealEmail2()" title="Klicken zum Anzeigen">[E-Mail anzeigen]</span>
-    </p>
+    <p>Du hast jederzeit das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch. Anfragen an: <span class="email-protected" onclick="revealEmail(this)" title="Klicken zum Anzeigen">[E-Mail anzeigen]</span></p>
 
     <h2>8. Beschwerderecht</h2>
-    <p>
-      Du hast das Recht, dich beim Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB)
-      zu beschweren: <a href="https://www.edoeb.admin.ch" target="_blank" rel="noopener">edoeb.admin.ch</a>.
-    </p>
+    <p>Du hast das Recht, dich beim Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) zu beschweren: <a href="https://www.edoeb.admin.ch" target="_blank" rel="noopener">edoeb.admin.ch</a>.</p>
 
     <h2>9. Änderungen</h2>
-    <p>
-      Diese Datenschutzerklärung kann bei Bedarf angepasst werden.
-      Die jeweils aktuelle Version ist auf dieser Seite abrufbar.
-    </p>
+    <p>Diese Datenschutzerklärung kann bei Bedarf angepasst werden. Die jeweils aktuelle Version ist auf dieser Seite abrufbar.</p>
+  </div>
+
+  <!-- ── ENGLISH (default for FR / ES / EN) ── -->
+  <div class="privacy-box" data-lang-block="en">
+    <h1>Privacy Policy</h1>
+    <p class="privacy-date">As of: May 2025</p>
+
+    <h2>1. Responsible Person</h2>
+    <p>Severin Stadler, Bern, Switzerland<br />
+    Email: <span class="email-protected" onclick="revealEmail(this)" title="Click to reveal">[Show email]</span></p>
+
+    <h2>2. General Principle</h2>
+    <p>This website is a purely informational site and does not actively collect personal data. No cookies are set, no tracking is performed, and no user profiles are created.</p>
+
+    <h2>3. Server Logs (GitHub Pages)</h2>
+    <p>This website is hosted via GitHub Pages (GitHub, Inc., USA). When you visit the site, technical data is automatically transmitted and stored in server log files:</p>
+    <ul>
+      <li>IP address (anonymised)</li>
+      <li>Date and time of access</li>
+      <li>Page visited</li>
+      <li>Browser and operating system</li>
+    </ul>
+    <p>This data is used solely to ensure technical operation and is deleted after a short period. Legal basis: legitimate interest (Art. 6(1)(f) GDPR / Art. 31 nDSG). Further information: <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection" target="_blank" rel="noopener">GitHub Pages Privacy</a>.</p>
+
+    <h2>4. Google Fonts</h2>
+    <p>This website loads fonts from Google Fonts (Google LLC, USA), which transmits your IP address to Google. Legal basis: legitimate interest. Privacy policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+    <h2>5. External Links (YouTube)</h2>
+    <p>This website contains links to the Fizzi & The Prof YouTube channel (YouTube LLC / Google LLC, USA). Once you click a YouTube link, you leave this website and YouTube's privacy policy applies: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+    <h2>6. Contact by Email</h2>
+    <p>If you contact us by email, the data you provide will be used solely to handle your enquiry and will not be shared with third parties.</p>
+
+    <h2>7. Your Rights</h2>
+    <p>You have the right to access, rectify, erase, restrict, port, and object to your data at any time. Requests to: <span class="email-protected" onclick="revealEmail(this)" title="Click to reveal">[Show email]</span></p>
+
+    <h2>8. Right to Lodge a Complaint</h2>
+    <p>You have the right to lodge a complaint with the Federal Data Protection and Information Commissioner (FDPIC): <a href="https://www.edoeb.admin.ch" target="_blank" rel="noopener">edoeb.admin.ch</a>.</p>
+
+    <h2>9. Changes</h2>
+    <p>This privacy policy may be updated from time to time. The current version is always available on this page.</p>
   </div>
 
   <footer>
@@ -161,18 +154,28 @@
 
   <script src="js/i18n.js"></script>
   <script>
+    function _e() { return ['severin23','stadler'].join('') + '@' + ['gmail','com'].join('.'); }
+    function revealEmail(el) {
+      el.innerHTML = '<a href="mailto:' + _e() + '">' + _e() + '</a>';
+      el.onclick = null;
+      el.style.borderBottom = 'none';
+    }
+
+    function showLangBlock(lang) {
+      document.querySelectorAll('[data-lang-block]').forEach(el => {
+        el.classList.toggle('active', el.dataset.langBlock === (lang === 'de' ? 'de' : 'en'));
+      });
+    }
+
+    // Hook into i18n lang changes
+    const _origSetLang = setLang;
+    window.setLang = function(lang) {
+      _origSetLang(lang);
+      showLangBlock(lang);
+    };
+
     initI18n();
-    function _e() { return ['severin23', 'stadler'].join('') + '@' + ['gmail', 'com'].join('.'); }
-    function revealEmail() {
-      const el = document.getElementById('privacy-email');
-      el.innerHTML = '<a href="mailto:' + _e() + '">' + _e() + '</a>';
-      el.onclick = null; el.style.borderBottom = 'none';
-    }
-    function revealEmail2() {
-      const el = document.getElementById('privacy-email-2');
-      el.innerHTML = '<a href="mailto:' + _e() + '">' + _e() + '</a>';
-      el.onclick = null; el.style.borderBottom = 'none';
-    }
+    showLangBlock(detectLang());
   </script>
 </body>
 </html>
