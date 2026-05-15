@@ -8,6 +8,237 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Kids Hero ── */
+    .kids-hero {
+      background: linear-gradient(135deg, #E8F5E9 0%, #F1F8E9 50%, #FFF8E1 100%);
+      padding: 3rem 2rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .kids-hero-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-end;
+      gap: 2rem;
+    }
+    .kids-hero-text { flex: 1; }
+    .kids-hero-text h1 {
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      color: var(--brown);
+      margin-bottom: 0.5rem;
+      line-height: 1.1;
+    }
+    .kids-hero-text p {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      margin-bottom: 1.75rem;
+      max-width: 420px;
+    }
+    .kids-hero-fizzi {
+      flex-shrink: 0;
+      width: clamp(160px, 28vw, 280px);
+      position: relative;
+    }
+    .kids-hero-fizzi img {
+      width: 100%;
+      filter: drop-shadow(0 12px 24px rgba(0,0,0,0.18));
+      animation: fizzi-bounce 3s ease-in-out infinite;
+    }
+    @keyframes fizzi-bounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-12px); }
+    }
+
+    /* Speech bubble */
+    .speech-bubble {
+      position: absolute;
+      top: -10px;
+      right: -20px;
+      background: #fff;
+      border: 3px solid var(--orange);
+      border-radius: 20px;
+      padding: 0.6rem 0.9rem;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--brown);
+      max-width: 150px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .speech-bubble::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 24px;
+      border: 6px solid transparent;
+      border-top-color: var(--orange);
+    }
+    .speech-bubble::before {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 26px;
+      border: 5px solid transparent;
+      border-top-color: #fff;
+      z-index: 1;
+    }
+
+    /* Decorative dots */
+    .kids-hero::before {
+      content: '⭐ 🌈 ✨ 🦊 🎯';
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      font-size: 1.5rem;
+      letter-spacing: 0.8rem;
+      opacity: 0.35;
+    }
+
+    /* Wave divider */
+    .wave-top {
+      display: block;
+      width: 100%;
+      height: 60px;
+      background: #fff;
+      clip-path: ellipse(55% 100% at 50% 100%);
+      margin-top: -2px;
+    }
+    .wave-top.green { background: #4CAF50; }
+    .wave-top.cream { background: var(--cream); }
+    .wave-top.white { background: #fff; }
+
+    /* ── Topic Bubbles ── */
+    .section-topics {
+      background: #fff;
+      padding: 2rem 2rem 3rem;
+      text-align: center;
+    }
+    .section-topics h2 {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      margin-bottom: 2rem;
+    }
+    .topic-bubbles {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .topic-bubble {
+      background: var(--cream);
+      border-radius: 28px;
+      padding: 2rem 1.5rem;
+      flex: 1 1 220px;
+      max-width: 260px;
+      text-align: center;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+    .topic-bubble:hover { transform: scale(1.04); }
+    .topic-bubble .bubble-icon { font-size: 3rem; margin-bottom: 0.75rem; }
+    .topic-bubble h3 {
+      font-size: 1.2rem;
+      color: var(--brown);
+      margin-bottom: 0.4rem;
+    }
+    .topic-bubble p { font-size: 0.95rem; }
+
+    .topic-bubble.t1 { border-top: 5px solid var(--green); }
+    .topic-bubble.t2 { border-top: 5px solid var(--orange); }
+    .topic-bubble.t3 { border-top: 5px solid var(--blue); }
+
+    /* ── Episodes Kids ── */
+    .section-kids-episodes {
+      background: var(--cream);
+      padding: 3rem 2rem 3.5rem;
+      text-align: center;
+    }
+    .section-kids-episodes h2 { font-size: clamp(1.5rem, 4vw, 2.2rem); margin-bottom: 0.5rem; }
+    .section-kids-episodes > p { margin-bottom: 2rem; }
+    .kids-ep-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .kids-ep-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 1.25rem 1rem;
+      width: 150px;
+      text-align: center;
+      box-shadow: 0 3px 14px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+    .kids-ep-card:hover { transform: translateY(-4px); }
+    .kids-ep-card .ep-icon-big { font-size: 2.5rem; margin-bottom: 0.4rem; }
+    .kids-ep-card .ep-label {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--brown);
+      line-height: 1.3;
+    }
+    .kids-ep-card .ep-num-small {
+      font-size: 0.7rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-top: 0.25rem;
+    }
+
+    /* ── Fizzi Says ── */
+    .section-fizzi-says {
+      background: #fff;
+      padding: 3rem 2rem 3.5rem;
+      text-align: center;
+    }
+    .fizzi-says-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      background: linear-gradient(135deg, #E8F5E9, #FFF8E1);
+      border-radius: 28px;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .fizzi-says-img { width: 110px; flex-shrink: 0; }
+    .fizzi-says-img img {
+      width: 100%;
+      filter: drop-shadow(0 6px 12px rgba(0,0,0,0.15));
+    }
+    .fizzi-says-text { text-align: left; }
+    .fizzi-says-text .quote-mark {
+      font-size: 3rem;
+      line-height: 0.5;
+      color: var(--orange);
+      font-family: Georgia, serif;
+    }
+    .fizzi-says-text p {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--brown);
+      line-height: 1.5;
+      margin: 0.5rem 0;
+    }
+    .fizzi-says-text .quote-name {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+      .kids-hero-inner { flex-direction: column; align-items: center; text-align: center; }
+      .kids-hero-text p { max-width: 100%; }
+      .kids-hero-fizzi { width: 180px; }
+      .speech-bubble { right: -10px; top: -20px; font-size: 0.75rem; max-width: 130px; }
+      .fizzi-says-inner { flex-direction: column; text-align: center; }
+      .fizzi-says-text { text-align: center; }
+    }
+  </style>
 </head>
 <body>
 
@@ -17,12 +248,12 @@
       <span>Fizzi &amp; The Prof</span>
     </a>
     <nav>
-      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="index.html"      data-i18n="nav_home">Home</a>
       <a href="characters.html" data-i18n="nav_characters">Characters</a>
-      <a href="episodes.html" data-i18n="nav_episodes">Episodes</a>
+      <a href="episodes.html"   data-i18n="nav_episodes">Episodes</a>
       <a href="kids.html" class="active" data-i18n="nav_kids">Kids</a>
-      <a href="teens.html"  data-i18n="nav_teens">Teens</a>
-      <a href="adults.html" data-i18n="nav_adults">Parents & Teachers</a>
+      <a href="teens.html"      data-i18n="nav_teens">Teens</a>
+      <a href="adults.html"     data-i18n="nav_adults">Parents & Teachers</a>
       <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener" data-i18n="nav_youtube">YouTube</a>
     </nav>
     <div class="lang-switcher">
@@ -33,27 +264,92 @@
     </div>
   </header>
 
-  <section class="page-hero kids-bg">
-    <img id="titelbild" src="assets/titelbild_en.png" alt="Fizzi & The Prof" />
-    <h1 data-i18n="kids_hero">Hi! I'm Fizzi!</h1>
-    <p data-i18n="kids_sub">Come on an adventure – let's learn together!</p>
+  <!-- ── Hero ── -->
+  <section class="kids-hero">
+    <div class="kids-hero-inner">
+      <div class="kids-hero-text">
+        <h1 data-i18n="kids_hero">Hi! I'm Fizzi!</h1>
+        <p data-i18n="kids_sub">Come on an adventure – let's learn together!</p>
+        <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener" class="btn btn-youtube">
+          <svg width="20" height="14" viewBox="0 0 22 16" fill="none" aria-hidden="true">
+            <path d="M21.54 2.5A2.76 2.76 0 0 0 19.6.53C17.93 0 11 0 11 0S4.07 0 2.4.53A2.76 2.76 0 0 0 .46 2.5 29 29 0 0 0 0 8a29 29 0 0 0 .46 5.5A2.76 2.76 0 0 0 2.4 15.47C4.07 16 11 16 11 16s6.93 0 8.6-.53a2.76 2.76 0 0 0 1.94-1.97A29 29 0 0 0 22 8a29 29 0 0 0-.46-5.5Z" fill="#fff"/>
+            <path d="M8.75 11.43V4.57L14.5 8l-5.75 3.43Z" fill="#FF0000"/>
+          </svg>
+          <span data-i18n="kids_cta">Watch the videos!</span>
+        </a>
+      </div>
+      <div class="kids-hero-fizzi">
+        <div class="speech-bubble" data-i18n="kids_bubble">Let's count together! 🐾</div>
+        <img src="assets/characters/fizzi.png" alt="Fizzi" />
+      </div>
+    </div>
+  </section>
+  <div class="wave-top white"></div>
+
+  <!-- ── Topic Bubbles ── -->
+  <section class="section-topics">
+    <h2 data-i18n="kids_fun_title">What do we learn?</h2>
+    <div class="topic-bubbles">
+      <div class="topic-bubble t1">
+        <div class="bubble-icon">🔢</div>
+        <h3 data-i18n="kids_fun_1_title">Numbers & Maths</h3>
+        <p data-i18n="kids_fun_1_desc">Counting, adding and subtracting – step by step!</p>
+      </div>
+      <div class="topic-bubble t2">
+        <div class="bubble-icon">🔺</div>
+        <h3 data-i18n="kids_fun_2_title">Shapes & Colours</h3>
+        <p data-i18n="kids_fun_2_desc">Circles, triangles, squares – all around us!</p>
+      </div>
+      <div class="topic-bubble t3">
+        <div class="bubble-icon">🌟</div>
+        <h3 data-i18n="kids_fun_3_title">Fun & Adventure</h3>
+        <p data-i18n="kids_fun_3_desc">Every episode is a new adventure with Fizzi and Pico!</p>
+      </div>
+    </div>
+  </section>
+  <div class="wave-top cream"></div>
+
+  <!-- ── Episodes for Kids ── -->
+  <section class="section-kids-episodes">
+    <h2 data-i18n="kids_ep_title">Your Episodes</h2>
+    <p data-i18n="kids_ep_sub">Phase 1 – 12 episodes just for you. Coming soon!</p>
+    <div class="kids-ep-grid">
+      <div class="kids-ep-card"><div class="ep-icon-big">🔢</div><div class="ep-label" data-i18n="ep_prev_01">Numbers 1–3</div><div class="ep-num-small">E01</div></div>
+      <div class="kids-ep-card"><div class="ep-icon-big">🎯</div><div class="ep-label" data-i18n="ep_prev_02">Numbers 4–6</div><div class="ep-num-small">E02</div></div>
+      <div class="kids-ep-card"><div class="ep-icon-big">🌟</div><div class="ep-label" data-i18n="ep_prev_03">Numbers 7–9</div><div class="ep-num-small">E03</div></div>
+      <div class="kids-ep-card"><div class="ep-icon-big">🔟</div><div class="ep-label" data-i18n="ep_prev_04">The Number 10</div><div class="ep-num-small">E04</div></div>
+      <div class="kids-ep-card"><div class="ep-icon-big">➕</div><div class="ep-label" data-i18n="ep_prev_05">Addition</div><div class="ep-num-small">E05</div></div>
+      <div class="kids-ep-card"><div class="ep-icon-big">➖</div><div class="ep-label" data-i18n="ep_prev_06">Subtraction</div><div class="ep-num-small">E06</div></div>
+    </div>
+    <a href="episodes.html" class="btn btn-green" data-i18n="home_ep_btn">View all Episodes</a>
+  </section>
+  <div class="wave-top white"></div>
+
+  <!-- ── Fizzi Says ── -->
+  <section class="section-fizzi-says">
+    <div class="fizzi-says-inner">
+      <div class="fizzi-says-img">
+        <img src="assets/characters/fizzi.png" alt="Fizzi" />
+      </div>
+      <div class="fizzi-says-text">
+        <div class="quote-mark">"</div>
+        <p data-i18n="kids_fizzi_quote">Counting is easy when we do it together. Every number is a new friend!</p>
+        <div class="quote-mark" style="text-align:right">"</div>
+        <p class="quote-name">– Fizzi 🦊</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-youtube">
+    <h2 data-i18n="youtube_section">Our YouTube Channel</h2>
+    <p data-i18n="youtube_desc">All episodes free – subscribe now and never miss a new episode.</p>
     <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener" class="btn btn-youtube">
       <svg width="20" height="14" viewBox="0 0 22 16" fill="none" aria-hidden="true">
         <path d="M21.54 2.5A2.76 2.76 0 0 0 19.6.53C17.93 0 11 0 11 0S4.07 0 2.4.53A2.76 2.76 0 0 0 .46 2.5 29 29 0 0 0 0 8a29 29 0 0 0 .46 5.5A2.76 2.76 0 0 0 2.4 15.47C4.07 16 11 16 11 16s6.93 0 8.6-.53a2.76 2.76 0 0 0 1.94-1.97A29 29 0 0 0 22 8a29 29 0 0 0-.46-5.5Z" fill="#fff"/>
         <path d="M8.75 11.43V4.57L14.5 8l-5.75 3.43Z" fill="#FF0000"/>
       </svg>
-      <span data-i18n="kids_cta">Watch the videos!</span>
+      <span data-i18n="youtube_btn">Subscribe to channel</span>
     </a>
-  </section>
-
-  <section class="section-content">
-    <h2 data-i18n="kids_what_title">What do we do?</h2>
-    <ul class="feature-list">
-      <li data-i18n="kids_what_1">We count, calculate, and solve puzzles!</li>
-      <li data-i18n="kids_what_2">We discover animals, colours, and the world!</li>
-      <li data-i18n="kids_what_3">Fizzi and The Prof always have great jokes!</li>
-    </ul>
-    <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener" class="btn btn-green" data-i18n="kids_cta">Watch the videos!</a>
   </section>
 
   <footer>
