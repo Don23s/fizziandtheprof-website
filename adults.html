@@ -3,11 +3,239 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fizzi & The Prof – Parents & Teachers</title>
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Fizzi &amp; The Prof" />
+  <meta property="og:title"       content="Parents &amp; Teachers – Fizzi &amp; The Prof" />
+  <meta property="og:description" content="Learning objectives, episode overview, and classroom tips for parents and teachers." />
+  <meta property="og:image"       content="https://www.fizziandtheprof.org/assets/titelbild_en.png" />
+  <meta property="og:url"         content="https://www.fizziandtheprof.org/adults.html" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:title"      content="Parents &amp; Teachers – Fizzi &amp; The Prof" />
+  <meta name="twitter:description" content="Learning objectives, episode overview, and classroom tips for parents and teachers." />
+  <meta name="twitter:image"      content="https://www.fizziandtheprof.org/assets/titelbild_en.png" />
+  <title>Fizzi &amp; The Prof – Parents &amp; Teachers</title>
   <link rel="icon" href="assets/logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Hero ── */
+    .adults-hero {
+      background: linear-gradient(135deg, #EDE7F6 0%, #E8EAF6 100%);
+      padding: 4rem 2rem 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .adults-hero .hero-icon { font-size: 4rem; display: block; margin-bottom: 1.5rem; }
+    .adults-hero h1 {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      color: var(--purple);
+      margin-bottom: 0.75rem;
+    }
+    .adults-hero p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 580px;
+      margin: 0 auto 2rem;
+    }
+    .adults-hero::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: var(--cream);
+      clip-path: ellipse(55% 100% at 50% 100%);
+    }
+
+    /* ── Audience cards ── */
+    .audience-section {
+      background: var(--cream);
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+    }
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .audience-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2rem 1.75rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      text-align: left;
+    }
+    .audience-card .a-icon { font-size: 2.5rem; display: block; margin-bottom: 1rem; }
+    .audience-card h3 { font-size: 1.15rem; font-weight: 800; color: var(--brown); margin-bottom: 0.6rem; }
+    .audience-card p  { color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+    .audience-card.parents { border-top: 4px solid var(--green); }
+    .audience-card.teachers { border-top: 4px solid var(--purple); }
+
+    /* ── Phases table ── */
+    .phases-section {
+      background: #fff;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .phases-section h2 { margin-bottom: 2rem; }
+    .phases-table {
+      max-width: 800px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.95rem;
+    }
+    .phases-table th {
+      background: var(--purple);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      font-weight: 800;
+      text-align: left;
+    }
+    .phases-table th:first-child { border-radius: 12px 0 0 0; }
+    .phases-table th:last-child  { border-radius: 0 12px 0 0; }
+    .phases-table td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid #F0E6DA;
+      color: var(--muted);
+      text-align: left;
+    }
+    .phases-table tr:last-child td:first-child { border-radius: 0 0 0 12px; }
+    .phases-table tr:last-child td:last-child  { border-radius: 0 0 12px 0; }
+    .phases-table tr:nth-child(even) td { background: var(--cream); }
+    .phases-table .phase-num {
+      font-weight: 800;
+      color: var(--brown);
+      white-space: nowrap;
+    }
+    .status-live {
+      display: inline-block;
+      background: #E8F5E9;
+      color: var(--green-d);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.1rem 0.6rem;
+      border-radius: 20px;
+    }
+    .status-soon {
+      display: inline-block;
+      background: #F3E5F5;
+      color: var(--purple);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.1rem 0.6rem;
+      border-radius: 20px;
+    }
+
+    /* ── Approach cards ── */
+    .approach-section {
+      background: var(--cream);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .approach-section h2 { margin-bottom: 2rem; }
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .approach-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.5rem 1.25rem;
+      box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+      text-align: left;
+    }
+    .approach-card .ap-icon { font-size: 2rem; display: block; margin-bottom: 0.75rem; }
+    .approach-card h3 { font-size: 1rem; font-weight: 800; color: var(--brown); margin-bottom: 0.4rem; }
+    .approach-card p  { color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
+
+    /* ── Tips ── */
+    .tips-section {
+      background: #fff;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .tips-section h2 { margin-bottom: 2rem; }
+    .tips-list {
+      list-style: none;
+      padding: 0;
+      max-width: 620px;
+      margin: 0 auto 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      text-align: left;
+    }
+    .tips-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      background: var(--cream);
+      border-radius: 14px;
+      padding: 1rem 1.25rem;
+      color: var(--muted);
+      font-size: 0.97rem;
+      font-weight: 700;
+    }
+    .tips-list li::before {
+      content: '💡';
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: -1px;
+    }
+
+    /* ── FAQ ── */
+    .faq-section {
+      background: var(--cream);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .faq-section h2 { margin-bottom: 2rem; }
+    .faq-list {
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: left;
+    }
+    .faq-item {
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .faq-q {
+      font-weight: 800;
+      color: var(--brown);
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+    .faq-a {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    /* ── CTA ── */
+    .adults-cta {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #fff;
+      text-align: center;
+      padding: 3.5rem 2rem;
+    }
+    .adults-cta h2 { color: #fff; margin-bottom: 0.75rem; }
+    .adults-cta p  { color: rgba(255,255,255,0.75); max-width: 500px; margin: 0 auto 2rem; }
+  </style>
 </head>
 <body>
 
@@ -17,11 +245,11 @@
       <span>Fizzi &amp; The Prof</span>
     </a>
     <nav>
-      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="index.html"      data-i18n="nav_home">Home</a>
       <a href="characters.html" data-i18n="nav_characters">Characters</a>
-      <a href="episodes.html" data-i18n="nav_episodes">Episodes</a>
-      <a href="kids.html"  data-i18n="nav_kids">Kids</a>
-      <a href="teens.html" data-i18n="nav_teens">Teens</a>
+      <a href="episodes.html"   data-i18n="nav_episodes">Episodes</a>
+      <a href="kids.html"       data-i18n="nav_kids">Kids</a>
+      <a href="teens.html"      data-i18n="nav_teens">Teens</a>
       <a href="adults.html" class="active" data-i18n="nav_adults">Parents & Teachers</a>
       <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener" data-i18n="nav_youtube">YouTube</a>
     </nav>
@@ -34,10 +262,11 @@
     <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </header>
 
-  <section class="page-hero adults-bg">
-    <img id="titelbild" src="assets/titelbild_en.png" alt="Fizzi & The Prof" />
+  <!-- Hero -->
+  <section class="adults-hero">
+    <span class="hero-icon">📚</span>
     <h1 data-i18n="adults_hero">Learning videos for the classroom</h1>
-    <p data-i18n="adults_sub">Fizzi & The Prof offer structured, age-appropriate videos – free and multilingual.</p>
+    <p  data-i18n="adults_sub">Fizzi &amp; The Prof offer structured, age-appropriate videos – free and multilingual.</p>
     <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener" class="btn btn-youtube">
       <svg width="20" height="14" viewBox="0 0 22 16" fill="none" aria-hidden="true">
         <path d="M21.54 2.5A2.76 2.76 0 0 0 19.6.53C17.93 0 11 0 11 0S4.07 0 2.4.53A2.76 2.76 0 0 0 .46 2.5 29 29 0 0 0 0 8a29 29 0 0 0 .46 5.5A2.76 2.76 0 0 0 2.4 15.47C4.07 16 11 16 11 16s6.93 0 8.6-.53a2.76 2.76 0 0 0 1.94-1.97A29 29 0 0 0 22 8a29 29 0 0 0-.46-5.5Z" fill="#fff"/>
@@ -47,24 +276,137 @@
     </a>
   </section>
 
-  <section class="section-content">
-    <h2 data-i18n="adults_what_title">Who is this for?</h2>
-    <ul class="feature-list">
-      <li data-i18n="adults_what_1">Parents who want to support their children's learning</li>
-      <li data-i18n="adults_what_2">Teachers looking for classroom material</li>
-      <li data-i18n="adults_what_3">Educators seeking multilingual content</li>
+  <!-- For parents / for teachers -->
+  <section class="audience-section">
+    <div class="audience-grid">
+      <div class="audience-card parents">
+        <span class="a-icon">👨‍👩‍👧</span>
+        <h3 data-i18n="adults_for_parents_title">For Parents</h3>
+        <p   data-i18n="adults_for_parents_desc">Support your child's learning with free, engaging videos. No subscription, no cost.</p>
+      </div>
+      <div class="audience-card teachers">
+        <span class="a-icon">🏫</span>
+        <h3 data-i18n="adults_for_teachers_title">For Teachers</h3>
+        <p   data-i18n="adults_for_teachers_desc">Supplement your lessons with multilingual learning videos aligned to curricula.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learning phases -->
+  <section class="phases-section">
+    <h2 data-i18n="adults_phases_title">Learning Phases</h2>
+    <table class="phases-table">
+      <thead>
+        <tr>
+          <th data-i18n="adults_phases_col_phase">Phase</th>
+          <th data-i18n="adults_phases_col_age">Ages</th>
+          <th data-i18n="adults_phases_col_topics">Topics</th>
+          <th data-i18n="adults_phases_col_status">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="phase-num">Phase 1</td>
+          <td>4–7</td>
+          <td data-i18n="adults_phase_1_topics">Numbers, shapes, basic maths</td>
+          <td><span class="status-live" data-i18n="adults_status_production">In Production</span></td>
+        </tr>
+        <tr>
+          <td class="phase-num">Phase 2</td>
+          <td>8–12</td>
+          <td data-i18n="adults_phase_2_topics">Algebra, geometry, natural sciences</td>
+          <td><span class="status-soon" data-i18n="adults_status_planned">Planned</span></td>
+        </tr>
+        <tr>
+          <td class="phase-num">Phase 3</td>
+          <td>12–14</td>
+          <td data-i18n="adults_phase_3_topics">Advanced maths, foreign languages</td>
+          <td><span class="status-soon" data-i18n="adults_status_planned">Planned</span></td>
+        </tr>
+        <tr>
+          <td class="phase-num">Phase 4</td>
+          <td>14–16</td>
+          <td data-i18n="adults_phase_4_topics">Critical thinking, science</td>
+          <td><span class="status-soon" data-i18n="adults_status_planned">Planned</span></td>
+        </tr>
+        <tr>
+          <td class="phase-num">Phase 5</td>
+          <td>16–18</td>
+          <td data-i18n="adults_phase_5_topics">Advanced topics, exam prep</td>
+          <td><span class="status-soon" data-i18n="adults_status_planned">Planned</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Approach -->
+  <section class="approach-section">
+    <h2 data-i18n="adults_approach_title">Pedagogical Approach</h2>
+    <div class="approach-grid">
+      <div class="approach-card">
+        <span class="ap-icon">🎯</span>
+        <h3 data-i18n="adults_approach_1_title">Structured Learning</h3>
+        <p   data-i18n="adults_approach_1_desc">Every episode follows a clear learning objective and builds on the previous one.</p>
+      </div>
+      <div class="approach-card">
+        <span class="ap-icon">🌍</span>
+        <h3 data-i18n="adults_approach_2_title">Multilingual Content</h3>
+        <p   data-i18n="adults_approach_2_desc">All content in German, English, French, and Spanish – ideal for multilingual classrooms.</p>
+      </div>
+      <div class="approach-card">
+        <span class="ap-icon">🆓</span>
+        <h3 data-i18n="adults_approach_3_title">Free &amp; Ad-Free</h3>
+        <p   data-i18n="adults_approach_3_desc">All episodes are freely available on YouTube. No paywall, no subscription needed.</p>
+      </div>
+      <div class="approach-card">
+        <span class="ap-icon">📈</span>
+        <h3 data-i18n="adults_approach_4_title">Age-Appropriate</h3>
+        <p   data-i18n="adults_approach_4_desc">From age 4 to 18 – each phase is tailored to the child's developmental stage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Classroom tips -->
+  <section class="tips-section">
+    <h2 data-i18n="adults_tips_title">Classroom Tips</h2>
+    <ul class="tips-list">
+      <li data-i18n="adults_tip_1">Use episodes as an introduction to a new topic</li>
+      <li data-i18n="adults_tip_2">Play episodes in the language currently being taught</li>
+      <li data-i18n="adults_tip_3">Use questions from the episode as a class discussion starter</li>
+      <li data-i18n="adults_tip_4">Watch episodes in advance and note the learning objectives</li>
     </ul>
+  </section>
 
-    <h2 data-i18n="adults_phases_title" style="margin-bottom:1.25rem;">Learning Phases</h2>
-    <ul class="phases-list">
-      <li data-i18n="adults_phase_1">Phase 1 – Ages 4–7: Core concepts, numbers, colours, language</li>
-      <li data-i18n="adults_phase_2">Phase 2 – Ages 8–12: Maths, logic, natural sciences</li>
-      <li data-i18n="adults_phase_3">Phase 3–5 – Age 12+: Advanced topics, foreign languages, critical thinking</li>
-    </ul>
+  <!-- FAQ -->
+  <section class="faq-section">
+    <h2 data-i18n="adults_faq_title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" data-i18n="adults_faq_q1">Are the videos really free?</div>
+        <div class="faq-a" data-i18n="adults_faq_a1">Yes, all episodes are freely available on YouTube – now and in the future.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" data-i18n="adults_faq_q2">Which subjects are covered?</div>
+        <div class="faq-a" data-i18n="adults_faq_a2">Phase 1: Mathematics basics. Phase 2: Advanced maths, natural sciences. More phases to follow.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" data-i18n="adults_faq_q3">Can I show the videos in class?</div>
+        <div class="faq-a" data-i18n="adults_faq_a3">Yes, you can use the public YouTube videos in your classroom.</div>
+      </div>
+    </div>
+  </section>
 
-    <p class="langs-badge" data-i18n="adults_langs">Available languages: German · English · French · Spanish</p>
-
-    <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener" class="btn btn-purple" data-i18n="adults_cta">Visit the channel</a>
+  <!-- CTA -->
+  <section class="adults-cta">
+    <h2 data-i18n="youtube_section">Our YouTube Channel</h2>
+    <p   data-i18n="youtube_desc">All episodes free – subscribe now and never miss a new episode.</p>
+    <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener" class="btn btn-youtube">
+      <svg width="20" height="14" viewBox="0 0 22 16" fill="none" aria-hidden="true">
+        <path d="M21.54 2.5A2.76 2.76 0 0 0 19.6.53C17.93 0 11 0 11 0S4.07 0 2.4.53A2.76 2.76 0 0 0 .46 2.5 29 29 0 0 0 0 8a29 29 0 0 0 .46 5.5A2.76 2.76 0 0 0 2.4 15.47C4.07 16 11 16 11 16s6.93 0 8.6-.53a2.76 2.76 0 0 0 1.94-1.97A29 29 0 0 0 22 8a29 29 0 0 0-.46-5.5Z" fill="#fff"/>
+        <path d="M8.75 11.43V4.57L14.5 8l-5.75 3.43Z" fill="#FF0000"/>
+      </svg>
+      <span data-i18n="youtube_btn">Subscribe to channel</span>
+    </a>
   </section>
 
   <footer>

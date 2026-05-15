@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fizzi & The Prof – Page Not Found</title>
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .not-found {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #FFF3E0 0%, #E8F5E9 100%);
+    }
+    .not-found .big-num {
+      font-size: 6rem;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .not-found h1 {
+      font-size: 1.8rem;
+      color: var(--brown);
+      margin-bottom: 1rem;
+    }
+    .not-found p {
+      color: var(--muted);
+      max-width: 440px;
+      margin: 0 auto 2rem;
+      font-size: 1.05rem;
+    }
+    .fizzi-404 {
+      font-size: 5rem;
+      animation: fizzi-bounce 3s ease-in-out infinite;
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="header-logo">
+      <img src="assets/logo.png" alt="Fizzi & The Prof Logo" />
+      <span>Fizzi &amp; The Prof</span>
+    </a>
+    <nav>
+      <a href="index.html"      data-i18n="nav_home">Home</a>
+      <a href="characters.html" data-i18n="nav_characters">Characters</a>
+      <a href="episodes.html"   data-i18n="nav_episodes">Episodes</a>
+      <a href="kids.html"       data-i18n="nav_kids">Kids</a>
+      <a href="teens.html"      data-i18n="nav_teens">Teens</a>
+      <a href="adults.html"     data-i18n="nav_adults">Parents & Teachers</a>
+      <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener" data-i18n="nav_youtube">YouTube</a>
+    </nav>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </header>
+
+  <div class="not-found">
+    <span class="fizzi-404">🦊</span>
+    <div class="big-num">404</div>
+    <h1 data-i18n="err404_title">Oops – Fizzi got lost!</h1>
+    <p data-i18n="err404_sub">This page doesn't exist. Maybe Fizzi hid it? Let's head back to the adventure!</p>
+    <a href="index.html" class="btn btn-primary" data-i18n="err404_btn">Back to Home</a>
+  </div>
+
+  <footer>
+    <img src="assets/logo.png" alt="F&P Logo" class="footer-logo" />
+    <p class="footer-tagline" data-i18n="footer_tagline">Learn. Laugh. Grow.</p>
+    <div class="footer-links">
+      <a href="imprint.html" data-i18n="footer_imprint">Imprint</a>
+      <a href="privacy.html" data-i18n="footer_privacy">Privacy Policy</a>
+    </div>
+    <p class="footer-copy" data-i18n="footer_copyright">© 2025 Fizzi & The Prof. All rights reserved.</p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script>initI18n();</script>
+  <script src="js/main.js"></script>
+</body>
+</html>
