@@ -317,6 +317,104 @@ nav a:hover, nav a.active {
   margin-bottom: 2rem;
 }
 
+/* ── Hero redesign ── */
+.hero-inner {
+  max-width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 3.5rem 2rem 3rem;
+  text-align: left;
+}
+.hero-text { flex: 1; }
+.hero-text h1 { margin-bottom: 0.75rem; }
+.hero-text p  { font-size: 1.1rem; margin-bottom: 1.75rem; max-width: 480px; }
+.hero-text .btn-group { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.hero-image { flex-shrink: 0; width: 380px; }
+.hero-image img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); }
+
+/* ── Stats bar ── */
+.stats-bar {
+  background: var(--brown);
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.stat-item { text-align: center; color: #fff; }
+.stat-number { font-size: 1.8rem; font-weight: 900; line-height: 1; }
+.stat-label  { font-size: 0.8rem; font-weight: 700; opacity: 0.75; margin-top: 0.2rem; }
+
+/* ── Characters teaser ── */
+.section-chars-teaser {
+  padding: 3.5rem 2rem;
+  background: #fff;
+  text-align: center;
+}
+.section-chars-teaser h2 { margin-bottom: 0.5rem; }
+.section-chars-teaser > p { color: var(--muted); margin-bottom: 2rem; font-size: 1rem; }
+.chars-row {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.char-teaser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+.char-teaser img {
+  height: 140px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.15));
+  transition: transform 0.25s;
+}
+.char-teaser:hover img { transform: translateY(-6px); }
+.char-teaser span { font-weight: 800; font-size: 0.95rem; color: var(--brown); }
+
+/* ── Episodes preview ── */
+.section-episodes-preview {
+  padding: 3.5rem 2rem;
+  background: var(--cream);
+  text-align: center;
+}
+.section-episodes-preview h2 { margin-bottom: 0.5rem; }
+.section-episodes-preview > p { color: var(--muted); margin-bottom: 2rem; }
+.ep-preview-grid {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.ep-preview-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 3px 16px rgba(0,0,0,0.08);
+  padding: 1.5rem 1.25rem;
+  width: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ep-preview-card .ep-icon { font-size: 2rem; }
+.ep-preview-card .ep-num { font-size: 0.75rem; font-weight: 800; color: var(--muted); }
+.ep-preview-card .ep-title { font-size: 0.95rem; font-weight: 800; color: var(--brown); }
+.ep-preview-card .ep-status {
+  font-size: 0.75rem; font-weight: 700;
+  padding: 0.2rem 0.7rem; border-radius: 20px;
+  background: #FFF3E0; color: #E65100;
+}
+
 /* ── Footer ── */
 footer {
   background: var(--brown);
