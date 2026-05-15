@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fizzi & The Prof</title>
+  <meta name="description" content="Educational adventures for children – free on YouTube. Lehrreiche Abenteuer für Kinder – kostenlos auf YouTube." />
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header>
+    <a href="index.html" class="header-logo">
+      <img src="assets/logo.png" alt="Fizzi & The Prof Logo" />
+      <span>Fizzi &amp; The Prof</span>
+    </a>
+
+    <nav>
+      <a href="index.html" class="active" data-i18n="nav_home">Home</a>
+      <a href="kids.html"   data-i18n="nav_kids">Kids</a>
+      <a href="teens.html"  data-i18n="nav_teens">Teens</a>
+      <a href="adults.html" data-i18n="nav_adults">Parents & Teachers</a>
+      <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener" data-i18n="nav_youtube">YouTube</a>
+    </nav>
+
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+    </div>
+  </header>
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <img id="titelbild" src="assets/titelbild_en.png" alt="Fizzi & The Prof" class="hero-banner" />
+    <h1 data-i18n="hero_tagline">Learning is fun – with Fizzi & The Prof!</h1>
+    <p data-i18n="hero_sub">Educational adventures for children aged 4 to 18 – free on YouTube.</p>
+    <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener" class="btn btn-youtube">
+      <svg width="22" height="16" viewBox="0 0 22 16" fill="none" aria-hidden="true">
+        <path d="M21.54 2.5A2.76 2.76 0 0 0 19.6.53C17.93 0 11 0 11 0S4.07 0 2.4.53A2.76 2.76 0 0 0 .46 2.5 29 29 0 0 0 0 8a29 29 0 0 0 .46 5.5A2.76 2.76 0 0 0 2.4 15.47C4.07 16 11 16 11 16s6.93 0 8.6-.53a2.76 2.76 0 0 0 1.94-1.97A29 29 0 0 0 22 8a29 29 0 0 0-.46-5.5Z" fill="#fff"/>
+        <path d="M8.75 11.43V4.57L14.5 8l-5.75 3.43Z" fill="#FF0000"/>
+      </svg>
+      <span data-i18n="hero_cta">Watch on YouTube</span>
+    </a>
+  </section>
+
+  <!-- ── Age Group Cards ── -->
+  <section class="section-choose">
+    <h2 data-i18n="hero_choose">Choose your group</h2>
+    <div class="cards">
+
+      <a href="kids.html" class="card card-kids">
+        <div class="card-icon">🦊</div>
+        <h3 data-i18n="card_kids_title">Kids</h3>
+        <span class="card-age" data-i18n="card_kids_age">Ages 4–7</span>
+        <p data-i18n="card_kids_desc">Colourful adventures, simple questions, and lots of fun with Fizzi and The Prof!</p>
+        <span class="btn btn-green" data-i18n="card_kids_btn">Let's go!</span>
+      </a>
+
+      <a href="teens.html" class="card card-teens">
+        <div class="card-icon">🔬</div>
+        <h3 data-i18n="card_teens_title">Teens</h3>
+        <span class="card-age" data-i18n="card_teens_age">Ages 8–14</span>
+        <p data-i18n="card_teens_desc">Exciting topics in science, language, and maths – explained with a smile.</p>
+        <span class="btn btn-blue" data-i18n="card_teens_btn">Learn more</span>
+      </a>
+
+      <a href="adults.html" class="card card-adults">
+        <div class="card-icon">📚</div>
+        <h3 data-i18n="card_adults_title">Parents & Teachers</h3>
+        <span class="card-age" data-i18n="card_adults_age">Adults</span>
+        <p data-i18n="card_adults_desc">Educational content, learning goals, and tips for use in the classroom.</p>
+        <span class="btn btn-purple" data-i18n="card_adults_btn">Get an overview</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ── YouTube Section ── -->
+  <section class="section-youtube">
+    <h2 data-i18n="youtube_section">Our YouTube Channel</h2>
+    <p data-i18n="youtube_desc">All episodes free – subscribe now and never miss a new episode.</p>
+    <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener" class="btn btn-youtube">
+      <svg width="20" height="14" viewBox="0 0 22 16" fill="none" aria-hidden="true">
+        <path d="M21.54 2.5A2.76 2.76 0 0 0 19.6.53C17.93 0 11 0 11 0S4.07 0 2.4.53A2.76 2.76 0 0 0 .46 2.5 29 29 0 0 0 0 8a29 29 0 0 0 .46 5.5A2.76 2.76 0 0 0 2.4 15.47C4.07 16 11 16 11 16s6.93 0 8.6-.53a2.76 2.76 0 0 0 1.94-1.97A29 29 0 0 0 22 8a29 29 0 0 0-.46-5.5Z" fill="#fff"/>
+        <path d="M8.75 11.43V4.57L14.5 8l-5.75 3.43Z" fill="#FF0000"/>
+      </svg>
+      <span data-i18n="youtube_btn">Subscribe to channel</span>
+    </a>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <img src="assets/logo.png" alt="F&P Logo" class="footer-logo" />
+    <p class="footer-tagline" data-i18n="footer_tagline">Learn. Laugh. Grow.</p>
+    <div class="footer-links">
+      <a href="imprint.html" data-i18n="footer_imprint">Imprint</a>
+      <a href="privacy.html" data-i18n="footer_privacy">Privacy Policy</a>
+    </div>
+    <p class="footer-copy" data-i18n="footer_copyright">© 2025 Fizzi & The Prof. All rights reserved.</p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script>initI18n();</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fizzi & The Prof – Teens</title>
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="header-logo">
+      <img src="assets/logo.png" alt="Fizzi & The Prof Logo" />
+      <span>Fizzi &amp; The Prof</span>
+    </a>
+    <nav>
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="kids.html"  data-i18n="nav_kids">Kids</a>
+      <a href="teens.html" class="active" data-i18n="nav_teens">Teens</a>
+      <a href="adults.html" data-i18n="nav_adults">Parents & Teachers</a>
+      <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener" data-i18n="nav_youtube">YouTube</a>
+    </nav>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+    </div>
+  </header>
+
+  <section class="page-hero teens-bg">
+    <img id="titelbild" src="assets/titelbild_en.png" alt="Fizzi & The Prof" />
+    <h1 data-i18n="teens_hero">Science meets adventure</h1>
+    <p data-i18n="teens_sub">Fizzi & The Prof explain how the world works – from maths to languages.</p>
+    <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener" class="btn btn-youtube">
+      <svg width="20" height="14" viewBox="0 0 22 16" fill="none" aria-hidden="true">
+        <path d="M21.54 2.5A2.76 2.76 0 0 0 19.6.53C17.93 0 11 0 11 0S4.07 0 2.4.53A2.76 2.76 0 0 0 .46 2.5 29 29 0 0 0 0 8a29 29 0 0 0 .46 5.5A2.76 2.76 0 0 0 2.4 15.47C4.07 16 11 16 11 16s6.93 0 8.6-.53a2.76 2.76 0 0 0 1.94-1.97A29 29 0 0 0 22 8a29 29 0 0 0-.46-5.5Z" fill="#fff"/>
+        <path d="M8.75 11.43V4.57L14.5 8l-5.75 3.43Z" fill="#FF0000"/>
+      </svg>
+      <span data-i18n="teens_cta">Watch now</span>
+    </a>
+  </section>
+
+  <section class="section-content">
+    <h2 data-i18n="teens_what_title">What will you learn?</h2>
+    <ul class="feature-list">
+      <li data-i18n="teens_what_1">Mathematics: numbers, algebra, geometry</li>
+      <li data-i18n="teens_what_2">Languages: German, French, Spanish</li>
+      <li data-i18n="teens_what_3">Natural sciences & logical thinking</li>
+    </ul>
+    <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener" class="btn btn-blue" data-i18n="teens_cta">Watch now</a>
+  </section>
+
+  <footer>
+    <img src="assets/logo.png" alt="F&P Logo" class="footer-logo" />
+    <p class="footer-tagline" data-i18n="footer_tagline">Learn. Laugh. Grow.</p>
+    <div class="footer-links">
+      <a href="imprint.html" data-i18n="footer_imprint">Imprint</a>
+      <a href="privacy.html" data-i18n="footer_privacy">Privacy Policy</a>
+    </div>
+    <p class="footer-copy" data-i18n="footer_copyright">© 2025 Fizzi & The Prof. All rights reserved.</p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script>initI18n();</script>
+</body>
+</html>
