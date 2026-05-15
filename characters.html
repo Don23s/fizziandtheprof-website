@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fizzi & The Prof – Characters</title>
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .characters-hero {
+      background: linear-gradient(135deg, #FFF3E0 0%, #E8F5E9 100%);
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+    }
+    .characters-hero h1 { margin-bottom: 0.5rem; }
+    .characters-hero p { font-size: 1.1rem; max-width: 540px; margin: 0 auto; }
+
+    .characters-grid {
+      max-width: 1060px;
+      margin: 3rem auto;
+      padding: 0 1.5rem 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+    }
+
+    .character-card {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+      padding: 2.5rem 2.5rem;
+      overflow: hidden;
+    }
+
+    .character-card.reverse { flex-direction: row-reverse; }
+
+    .character-img-wrap {
+      flex-shrink: 0;
+      width: 220px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .character-img-wrap img {
+      width: 100%;
+      max-height: 280px;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.15));
+      transition: transform 0.3s;
+    }
+
+    .character-card:hover .character-img-wrap img {
+      transform: translateY(-8px);
+    }
+
+    .character-info { flex: 1; }
+
+    .character-badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 0.25rem 0.9rem;
+      border-radius: 20px;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .badge-fizzi  { background: #C8621A; }
+    .badge-pico   { background: #3A6EA8; }
+    .badge-pino   { background: #5D3A1A; }
+
+    .character-info h2 {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+      color: var(--brown);
+    }
+
+    .character-role {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .character-info p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .character-traits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .trait {
+      background: var(--cream);
+      border: 1.5px solid #E8D5C4;
+      border-radius: 20px;
+      padding: 0.25rem 0.8rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--brown);
+    }
+
+    @media (max-width: 700px) {
+      .character-card, .character-card.reverse {
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+      }
+      .character-img-wrap { width: 160px; }
+      .character-info h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="header-logo">
+      <img src="assets/logo.png" alt="Fizzi & The Prof Logo" />
+      <span>Fizzi &amp; The Prof</span>
+    </a>
+    <nav>
+      <a href="index.html"      data-i18n="nav_home">Home</a>
+      <a href="characters.html" class="active" data-i18n="nav_characters">Characters</a>
+      <a href="kids.html"       data-i18n="nav_kids">Kids</a>
+      <a href="teens.html"      data-i18n="nav_teens">Teens</a>
+      <a href="adults.html"     data-i18n="nav_adults">Parents & Teachers</a>
+      <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener" data-i18n="nav_youtube">YouTube</a>
+    </nav>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+    </div>
+  </header>
+
+  <section class="characters-hero">
+    <h1 data-i18n="char_hero_title">Meet the Characters</h1>
+    <p data-i18n="char_hero_sub">Get to know Fizzi, Pico and Professor Pino – the team behind every adventure.</p>
+  </section>
+
+  <div class="characters-grid">
+
+    <!-- Fizzi -->
+    <div class="character-card">
+      <div class="character-img-wrap">
+        <img src="assets/characters/fizzi.png" alt="Fizzi" />
+      </div>
+      <div class="character-info">
+        <span class="character-badge badge-fizzi" data-i18n="char_fizzi_badge">Main Character</span>
+        <h2>Fizzi</h2>
+        <p class="character-role" data-i18n="char_fizzi_role">Young Fox · Curious Learner</p>
+        <p data-i18n="char_fizzi_desc">Fizzi is a young, curious fox who discovers the world of numbers and learning step by step. Fizzi is never afraid to make mistakes – in fact, those are often the best moments to learn something new. With boundless energy and an open heart, Fizzi invites every child to join the adventure.</p>
+        <div class="character-traits">
+          <span class="trait" data-i18n="trait_curious">Curious</span>
+          <span class="trait" data-i18n="trait_playful">Playful</span>
+          <span class="trait" data-i18n="trait_brave">Brave</span>
+          <span class="trait" data-i18n="trait_friendly">Friendly</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pico -->
+    <div class="character-card reverse">
+      <div class="character-img-wrap">
+        <img src="assets/characters/pico.png" alt="Pico" />
+      </div>
+      <div class="character-info">
+        <span class="character-badge badge-pico" data-i18n="char_pico_badge">Best Friend</span>
+        <h2>Pico</h2>
+        <p class="character-role" data-i18n="char_pico_role">Little Songbird · Loyal Companion</p>
+        <p data-i18n="char_pico_desc">Pico is Fizzi's loyal best friend – a small, lively songbird who is always by Fizzi's side. Pico asks the questions that everyone is thinking, cheers Fizzi on when things get tough, and keeps the mood light with a well-timed joke. Together, they make the perfect learning duo.</p>
+        <div class="character-traits">
+          <span class="trait" data-i18n="trait_loyal">Loyal</span>
+          <span class="trait" data-i18n="trait_witty">Witty</span>
+          <span class="trait" data-i18n="trait_caring">Caring</span>
+          <span class="trait" data-i18n="trait_cheerful">Cheerful</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Professor Pino -->
+    <div class="character-card">
+      <div class="character-img-wrap">
+        <img src="assets/characters/pino.png" alt="Professor Pino" />
+      </div>
+      <div class="character-info">
+        <span class="character-badge badge-pino" data-i18n="char_pino_badge">The Teacher</span>
+        <h2>Professor Pino</h2>
+        <p class="character-role" data-i18n="char_pino_role">Older Fox · Wise Mentor</p>
+        <p data-i18n="char_pino_desc">Professor Pino is a wise, gentle older fox who guides Fizzi and Pico through the world of knowledge. Patient and quietly humorous, he has a gift for asking just the right question at the right moment. He never simply gives the answer – he loves to watch his students think their way to the solution themselves.</p>
+        <div class="character-traits">
+          <span class="trait" data-i18n="trait_wise">Wise</span>
+          <span class="trait" data-i18n="trait_patient">Patient</span>
+          <span class="trait" data-i18n="trait_humorous">Humorous</span>
+          <span class="trait" data-i18n="trait_inspiring">Inspiring</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <img src="assets/logo.png" alt="F&P Logo" class="footer-logo" />
+    <p class="footer-tagline" data-i18n="footer_tagline">Learn. Laugh. Grow.</p>
+    <div class="footer-links">
+      <a href="imprint.html" data-i18n="footer_imprint">Imprint</a>
+      <a href="privacy.html" data-i18n="footer_privacy">Privacy Policy</a>
+    </div>
+    <p class="footer-copy" data-i18n="footer_copyright">© 2025 Fizzi & The Prof. All rights reserved.</p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script>initI18n();</script>
+</body>
+</html>
