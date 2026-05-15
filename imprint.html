@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fizzi & The Prof – Impressum</title>
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .imprint-box {
+      max-width: 680px;
+      margin: 3rem auto;
+      padding: 0 1.5rem 4rem;
+    }
+    .imprint-box h1 {
+      margin-bottom: 2rem;
+    }
+    .imprint-box h2 {
+      font-size: 1.1rem;
+      margin: 2rem 0 0.4rem;
+      color: var(--brown);
+    }
+    .imprint-box p, .imprint-box address {
+      font-style: normal;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    .imprint-box a {
+      color: var(--orange);
+      text-decoration: none;
+    }
+    .imprint-box a:hover {
+      text-decoration: underline;
+    }
+    .email-protected {
+      cursor: pointer;
+      color: var(--orange);
+      border-bottom: 1px dashed var(--orange);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="header-logo">
+      <img src="assets/logo.png" alt="Fizzi & The Prof Logo" />
+      <span>Fizzi &amp; The Prof</span>
+    </a>
+    <nav>
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="kids.html"  data-i18n="nav_kids">Kids</a>
+      <a href="teens.html" data-i18n="nav_teens">Teens</a>
+      <a href="adults.html" data-i18n="nav_adults">Parents & Teachers</a>
+      <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener" data-i18n="nav_youtube">YouTube</a>
+    </nav>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+    </div>
+  </header>
+
+  <div class="imprint-box">
+    <h1>Impressum</h1>
+
+    <h2>Verantwortlich für den Inhalt</h2>
+    <address>
+      Severin Stadler<br />
+      Bern, Schweiz
+    </address>
+
+    <h2>Kontakt</h2>
+    <p>
+      E-Mail:
+      <span class="email-protected" id="contact-email" onclick="revealEmail()" title="Klicken zum Anzeigen">[E-Mail anzeigen]</span>
+    </p>
+
+    <h2>YouTube-Kanal</h2>
+    <p>
+      <a href="https://www.youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA" target="_blank" rel="noopener">
+        youtube.com/channel/UC45PkbEf7DyNYmbeOaEzitA
+      </a>
+    </p>
+
+    <h2>Haftungsausschluss</h2>
+    <p>
+      Die Inhalte dieser Website wurden mit grösster Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit
+      und Aktualität der Inhalte übernehme ich keine Gewähr. Als Privatperson bin ich für eigene Inhalte
+      nach den allgemeinen Gesetzen verantwortlich. Eine Haftung für externe Links ist ausgeschlossen,
+      solange keine konkreten Rechtsverletzungen bekannt sind.
+    </p>
+
+    <h2>Urheberrecht</h2>
+    <p>
+      Alle auf dieser Website veröffentlichten Inhalte (Texte, Bilder, Grafiken) unterliegen dem
+      Urheberrecht. Eine Vervielfältigung oder Verwendung ohne ausdrückliche Genehmigung ist nicht gestattet.
+    </p>
+
+    <h2>Streitbeilegung</h2>
+    <p>
+      Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit:
+      <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.
+      Ich bin nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer
+      Verbraucherschlichtungsstelle teilzunehmen.
+    </p>
+  </div>
+
+  <footer>
+    <img src="assets/logo.png" alt="F&P Logo" class="footer-logo" />
+    <p class="footer-tagline" data-i18n="footer_tagline">Learn. Laugh. Grow.</p>
+    <div class="footer-links">
+      <a href="imprint.html" data-i18n="footer_imprint">Imprint</a>
+      <a href="privacy.html" data-i18n="footer_privacy">Privacy Policy</a>
+    </div>
+    <p class="footer-copy" data-i18n="footer_copyright">© 2025 Fizzi & The Prof. All rights reserved.</p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script>
+    initI18n();
+    function revealEmail() {
+      const u = ['severin23', 'stadler'].join('');
+      const d = ['gmail', 'com'].join('.');
+      const el = document.getElementById('contact-email');
+      el.innerHTML = '<a href="mailto:' + u + '@' + d + '">' + u + '@' + d + '</a>';
+      el.onclick = null;
+      el.style.borderBottom = 'none';
+    }
+  </script>
+</body>
+</html>
