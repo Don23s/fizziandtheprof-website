@@ -1,3 +1,13 @@
+/* ── CSS View Transitions (MPA) – nur main animieren, nav stabil ── */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) { animation: none; }
+
+  main { view-transition-name: main-content; }
+}
+
 /* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
